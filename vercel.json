@@ -1,0 +1,13 @@
+{
+  "installCommand": "cd web && npm ci",
+  "buildCommand": "cd web && npm run build",
+  "outputDirectory": "web/dist",
+  "functions": {
+    "api/kira.js": {
+      "maxDuration": 30
+    },
+    "api/token.js": {
+      "maxDuration": 15
+    }
+  }
+}

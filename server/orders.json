@@ -1,0 +1,13 @@
+{
+  "policy": {
+    "returnWindowDays": 7,
+    "sellerApprovalRefundAbove": 5000
+  },
+  "orders": [
+    {"orderId":"1042","buyerId":"buyer_1","item":"Wireless headphones","status":"shipped","eta":"2026-11-20","total":3499,"damaged":false},
+    {"orderId":"1043","buyerId":"buyer_1","item":"Running shoes","status":"delivered","eta":"2026-11-17","total":2200,"damaged":false},
+    {"orderId":"1044","buyerId":"buyer_1","item":"Coffee maker","status":"delayed","eta":"2026-11-24","total":6200,"damaged":false},
+    {"orderId":"1045","buyerId":"buyer_1","item":"Desk lamp","status":"delivered","eta":"2026-11-16","total":899,"damaged":true},
+    {"orderId":"1046","buyerId":"buyer_1","item":"Phone case","status":"shipped","eta":"2026-11-21","total":499,"damaged":false}
+  ]
+}

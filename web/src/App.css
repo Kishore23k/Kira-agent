@@ -1,0 +1,531 @@
+.welcome-screen {
+  min-height: 100svh;
+  padding: 38px clamp(24px, 7vw, 104px) 28px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse at 86% 8%, rgba(231, 220, 255, 0.62), transparent 34%),
+    #f7f7f4;
+  color: #242323;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  color: inherit;
+  font-size: 23px;
+  font-weight: 720;
+  letter-spacing: -1.2px;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 12px;
+  background: #28242e;
+  color: white;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.brand-dot {
+  color: #8468e8;
+}
+
+.welcome-copy {
+  max-width: 720px;
+  margin: clamp(72px, 12vh, 118px) auto 48px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: #817c86;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.7px;
+}
+
+.welcome-copy h1,
+.chat-heading h1 {
+  margin: 0;
+  color: #242323;
+  font-size: clamp(39px, 5vw, 62px);
+  font-weight: 560;
+  letter-spacing: -3.1px;
+  line-height: 1.08;
+}
+
+.welcome-description {
+  margin: 19px 0 0;
+  color: #77727b;
+  font-size: 16px;
+}
+
+.role-cards {
+  display: grid;
+  width: min(100%, 790px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0 auto;
+}
+
+.role-card {
+  position: relative;
+  min-height: 238px;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid #e8e5e9;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.83);
+  color: #28252b;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.role-card:hover:not(:disabled) {
+  transform: translateY(-3px);
+  border-color: #c9bdf1;
+  box-shadow: 0 18px 48px rgba(49, 37, 78, 0.09);
+}
+
+.role-card:focus-visible,
+.switch-role:focus-visible,
+.conversation-shortcuts button:focus-visible {
+  outline: 3px solid #9580e7;
+  outline-offset: 3px;
+}
+
+.role-card:disabled {
+  cursor: wait;
+  opacity: 0.68;
+}
+
+.buyer-card {
+  background: linear-gradient(145deg, #f1edff, #fff 75%);
+}
+
+.seller-card {
+  background: linear-gradient(145deg, #eaf5f1, #fff 75%);
+}
+
+.card-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 32px;
+  place-items: center;
+  border-radius: 14px;
+  background: #fff;
+  color: #8068d1;
+  font-size: 22px;
+  box-shadow: 0 4px 14px rgba(49, 37, 78, 0.08);
+}
+
+.seller-card .card-icon {
+  color: #378572;
+}
+
+.card-title,
+.card-description,
+.card-user,
+.card-loading {
+  display: block;
+}
+
+.card-title {
+  font-size: 21px;
+  font-weight: 650;
+  letter-spacing: -0.5px;
+}
+
+.card-description {
+  margin-top: 6px;
+  color: #79747d;
+  font-size: 13px;
+}
+
+.card-user {
+  position: absolute;
+  right: 24px;
+  bottom: 23px;
+  color: #9b96a0;
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.card-loading {
+  position: absolute;
+  right: 24px;
+  bottom: 23px;
+  color: #8068d1;
+  font-size: 12px;
+}
+
+.page-error,
+.inline-error {
+  color: #a63d4d;
+  font-size: 13px;
+}
+
+.page-error {
+  margin: 18px auto 0;
+}
+
+.welcome-footer,
+.chat-footer {
+  display: flex;
+  justify-content: space-between;
+  color: #a09ba3;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.05px;
+}
+
+.welcome-footer {
+  margin-top: auto;
+  padding-top: 54px;
+}
+
+.chat-page {
+  min-height: 100svh;
+  padding: 0 clamp(20px, 5vw, 72px) 18px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: #f7f7f4;
+  color: #242323;
+}
+
+.app-header {
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9e6e9;
+}
+
+.compact-brand {
+  font-size: 20px;
+}
+
+.compact-brand .brand-mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 19px;
+}
+
+.header-session {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #817c86;
+  font-size: 12px;
+}
+
+.connection-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #49ad82;
+  box-shadow: 0 0 0 3px #e0f1e8;
+}
+
+.header-divider {
+  width: 1px;
+  height: 17px;
+  margin: 0 5px;
+  background: #dedbe0;
+}
+
+.role-label {
+  color: #3d3942;
+  font-weight: 650;
+}
+
+.switch-role {
+  padding: 9px 13px;
+  border: 1px solid #e6e2e8;
+  border-radius: 9px;
+  background: white;
+  color: #57515c;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.switch-role span {
+  margin-left: 8px;
+  color: #8873d3;
+}
+
+.chat-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 32px 0 24px;
+}
+
+.chat-heading .eyebrow {
+  margin-bottom: 9px;
+}
+
+.chat-heading h1 {
+  font-size: clamp(30px, 3vw, 40px);
+  letter-spacing: -1.7px;
+}
+
+.chat-subtitle {
+  margin-top: 8px;
+  color: #827d86;
+  font-size: 13px;
+}
+
+.typing-indicator {
+  display: flex;
+  min-height: 38px;
+  align-items: center;
+  gap: 9px;
+  padding: 0 13px 0 7px;
+  border: 1px solid #e8e4ed;
+  border-radius: 30px;
+  background: #fff;
+  color: #99939e;
+  font-size: 11px;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+
+.typing-indicator.is-visible {
+  border-color: #d7cdf8;
+  color: #6654a0;
+}
+
+.typing-avatar,
+.conversation-avatar {
+  display: grid;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: #eee9ff;
+  color: #735ec1;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.typing-dots {
+  display: inline-flex;
+  gap: 3px;
+  margin-left: 1px;
+}
+
+.typing-dots i {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #8873d3;
+  animation: type-pulse 900ms ease-in-out infinite alternate;
+}
+
+.typing-dots i:nth-child(2) {
+  animation-delay: 150ms;
+}
+
+.typing-dots i:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+@keyframes type-pulse {
+  to { opacity: 0.3; transform: translateY(-2px); }
+}
+
+.conversation-shortcuts {
+  display: flex;
+  min-height: 56px;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 0 12px;
+  border: 1px solid #e9e6eb;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.shortcut-label {
+  margin: 0 7px 0 2px;
+  color: #a09aa4;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 1px;
+}
+
+.conversation-shortcuts button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 9px 5px 5px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.conversation-shortcuts button:hover {
+  border-color: #e9e4f3;
+  background: #faf9fc;
+}
+
+.conversation-avatar {
+  width: 27px;
+  height: 27px;
+  background: #e7f2ee;
+  color: #39836f;
+}
+
+.conversation-avatar.kira-avatar {
+  background: #eee9ff;
+  color: #735ec1;
+}
+
+.conversation-name {
+  color: #423e47;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.conversation-id {
+  color: #a09aa4;
+  font-family: var(--mono);
+  font-size: 9px;
+}
+
+.conversation-arrow {
+  color: #9583d4;
+  font-size: 12px;
+}
+
+.inline-error {
+  margin: 0 0 10px;
+}
+
+.chat-frame {
+  min-height: 460px;
+  flex: 1;
+  overflow: hidden;
+  border: 1px solid #e6e2e8;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(46, 37, 58, 0.045);
+}
+
+.nexconn-chat-root {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+}
+
+.chat-footer {
+  padding: 13px 2px 0;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.chat-footer strong {
+  color: #69636e;
+  font-weight: 650;
+}
+
+@media (max-width: 640px) {
+  .welcome-screen {
+    padding: 24px 20px 20px;
+  }
+
+  .welcome-copy {
+    margin: 72px auto 32px;
+  }
+
+  .welcome-copy h1 {
+    font-size: 43px;
+    letter-spacing: -2.3px;
+  }
+
+  .role-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .role-card {
+    min-height: 200px;
+  }
+
+  .card-icon {
+    margin-bottom: 20px;
+  }
+
+  .welcome-footer {
+    padding-top: 36px;
+    font-size: 8px;
+  }
+
+  .chat-page {
+    padding: 0 12px 12px;
+  }
+
+  .app-header {
+    min-height: 64px;
+  }
+
+  .header-session {
+    gap: 6px;
+    font-size: 10px;
+  }
+
+  .switch-role {
+    padding: 8px;
+    font-size: 10px;
+  }
+
+  .chat-heading {
+    align-items: start;
+    flex-direction: column;
+    padding: 25px 0 17px;
+  }
+
+  .conversation-shortcuts {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .shortcut-label {
+    width: 100%;
+  }
+
+  .conversation-id {
+    display: none;
+  }
+
+  .chat-frame,
+  .nexconn-chat-root {
+    min-height: 420px;
+  }
+
+  .chat-footer {
+    font-size: 8px;
+  }
+}
